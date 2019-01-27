@@ -6,14 +6,16 @@ public class Homework11 {
 	 * variables. The constructor should create and save an
 	 * ArrayList of int values
 	 */
-	public Homework11() {
+	 public static ArrayList<Integer> arr = new ArrayList<Integer>();
 
-	}
+	public Homework11(ArrayList<Integer> list) {
+		arr = list;
+  }
 
 	/* Return the stored ArrayList
 	 */
-	public ArrayList<Integer> getList() {
-
+	public ArrayList<Integer> getList(ArrayList<Integer> list) {
+		return list;
 	}
 
 	/* Fill the stored array list with integers, starting
@@ -21,7 +23,9 @@ public class Homework11 {
 	 * the resultant ArrayList should be n - m.
 	 */
 	public void problem1(int n, int m) {
-
+		for(int i = n; i < m; i++){
+			arr.add(i);
+		}
 	}
 
 	/* Remove from the stored array list all numbers that
@@ -30,27 +34,19 @@ public class Homework11 {
 	 * the right shift their indices down one.
 	 */
 	public void problem2(int n) {
-
+		for(int i = 0; i < arr.size(); i++){
+			if(arr.get(i) % n == 0){
+				arr.remove(i);
+				i--;
+			}
+		}
 	}
+
 
 	/* Problem 3:
 	 * Write the class Homework11A that extends this
 	 * class. Ensure that you create the constructor
 	 * appropriately and import java.util.ArrayList.
-	 */
-
-	/* Problem 4:
-	 * Write the method problem4 in the Homework11A
-	 * class. This should calculate and return the sum
-	 * of the values in the stored ArrayList. The method
-	 * header is:
-	 * public int problem4() {
-	 */
-
-	/* Problem 5:
-	 * In the Homework11A class, override the problem2
-	 * method. problem2 in Homework11A should instead
-	 * only keep the elements that evenly divide n
 	 */
 
 	public static void main(String[] args) {
